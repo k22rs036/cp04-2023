@@ -194,7 +194,10 @@ audio.play();
     // ButtonCがクリックされた時の処理
     function btnCClick(e){
         alarm();
-        
+        active = false;
+        period = 60* parseInt( $("#minute").val() ) + parseInt( $("#second").val() );
+        $("#time").html("経営時間 ： 0");
+        $("#remain").html("残り時間 ： " + period);
     }
     
  
