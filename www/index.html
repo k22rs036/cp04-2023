@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+>ButtonD</button><!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
@@ -201,13 +201,14 @@ audio.play();
         alarm();
         active = false;
         period = 60* parseInt( $("#minute").val() ) + parseInt( $("#second").val() );
-        $("#time").html("経営時間 ： 0");
+        $("#time").html("経過時間 ： 0");
         $("#remain").html("残り時間 ： " + period);
     }
 
      // ButtonDがクリックされた時の処理
     function btnDClick(e){
-        
+        alarm();
+        active = false;
     }
     
  
@@ -216,7 +217,7 @@ audio.play();
       if (active) {
         var time = parseInt( (new Date() - startTime)/1000 );
         var rest = period - time;
-        $("#time").html("経営時間： " + time);
+        $("#time").html("経過時間： " + time);
         $("#remain").html("残り時間： " + rest);
         analog(rest);
       }
