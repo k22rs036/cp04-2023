@@ -207,8 +207,10 @@ audio.play();
 
      // ButtonDがクリックされた時の処理
     function btnDClick(e){
-        alarm();
         active = false;
+        alarm();
+        active = true;
+        startTime = new Date();
     }
     
  
